@@ -72,8 +72,8 @@ void ReadConfig()
 
 void StartGame()
 {
-	SetEnvironmentVariableA("SteamAppId", "1245620");
-	ShellExecute(NULL, "open", "eldenring.exe", NULL, NULL, SW_SHOWDEFAULT);
+	SetEnvironmentVariableA("SteamAppId", "2622380");
+	ShellExecute(NULL, "open", "nightreign.exe", NULL, NULL, SW_SHOWDEFAULT);
 	logger.Log("Started game");
 }
 
@@ -277,7 +277,7 @@ void ToggleAntiCheat()
 			{
 				ToggleWinHttpProxyDll(false);
 			}
-		} 
+		}
 		else
 		{
 			if (ToggleStartProtectedGame(true))
@@ -286,7 +286,7 @@ void ToggleAntiCheat()
 			}
 		}
 	}
-	else 
+	else
 	{
 		logger.Log("start_protected_game.exe does not exist");
 		MessageBox(NULL, "Could not find start_protected_game.exe, please move anti_cheat_toggler.exe into the game folder or try to verify your game files through Steam.", NULL, MB_OK | MB_ICONERROR);
